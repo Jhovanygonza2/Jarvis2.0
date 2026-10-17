@@ -343,7 +343,7 @@ function App() {
         ...(item.jarvis ? [{ role: "assistant", content: item.jarvis }] : []),
       ]), { role: "user", content: mensajeOriginal }].slice(-20);
       try {
-        const response = await fetch("/.netlify/functions/chat", {
+        const response = await fetch(process.env.REACT_APP_CHAT_API_URL || "/.netlify/functions/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ messages: context }),
