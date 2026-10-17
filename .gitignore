@@ -23,3 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+
+/desktop/windows/dist/
+/desktop/windows/language-install.log
+
+# Local Netlify folder
+.netlify
